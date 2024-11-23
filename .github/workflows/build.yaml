@@ -68,7 +68,7 @@ jobs:
       working-directory: build
       run: |
         export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
-        cmake_flags="-GNinja ../../x265/source -DEXTRA_LIB=x265_8b.a;x265_12b.a -DEXTRA_LINK_FLAGS=-L. -DLINKED_8BIT=ON -DLINKED_12BIT=ON -DENABLE_HDR10_PLUS=ON -DHIGH_BIT_DEPTH=ON -DENABLE_SHARED=OFF -DTARGET_CPU=${{matrix.target_cpu}} -DUSE_LTO=ON
+        cmake_flags="-GNinja ../../x265/source -DEXTRA_LIB=x265_8b.a;x265_12b.a -DEXTRA_LINK_FLAGS=-L. -DLINKED_8BIT=ON -DLINKED_12BIT=ON -DENABLE_HDR10_PLUS=ON -DHIGH_BIT_DEPTH=ON -DENABLE_SHARED=OFF -DTARGET_CPU=${{matrix.target_cpu}} -DUSE_LTO=ON"
         pushd 10b
         cmake $cmake_flags
         ninja
